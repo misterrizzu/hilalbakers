@@ -1,0 +1,298 @@
+diff --git a/index.html b/index.html
+index 1669afcd5a3bb45ba2375004595e7615ae2515af..8c3a5af306432a968718596ba1714375daae8ece 100644
+--- a/index.html
++++ b/index.html
+@@ -1,148 +1,221 @@
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Restaurant Website | Google Maps Verified</title>
++    <title>Hilal Bakers & Family Restaurant – Best Bakery & Family Dining in Pulwama</title>
+     <meta
+       name="description"
+-      content="Professional restaurant website with digital menu, WhatsApp ordering, and Google Maps location integration."
++      content="Enjoy fresh bakery delights, pure veg family meals, custom cakes, and sweets at Hilal Bakers & Family Restaurant in Chandgam, Pulwama."
+     />
+     <link rel="stylesheet" href="styles.css" />
++    <script type="application/ld+json">
++      {
++        "@context": "https://schema.org",
++        "@type": "Restaurant",
++        "name": "Hilal Bakers and Family Restaurant",
++        "servesCuisine": ["Bakery", "Vegetarian", "Kashmiri"],
++        "telephone": "+91-90188-81213",
++        "address": {
++          "@type": "PostalAddress",
++          "streetAddress": "Chandgam",
++          "addressLocality": "Pulwama",
++          "addressRegion": "Jammu & Kashmir",
++          "postalCode": "192301",
++          "addressCountry": "IN"
++        },
++        "sameAs": [
++          "https://www.instagram.com/hilalbakers/",
++          "https://www.facebook.com/HilalBakerspvtltd/",
++          "https://maps.app.goo.gl/FxLS9AavZHeaDcCw6"
++        ]
++      }
++    </script>
+   </head>
+   <body>
+     <header class="hero" id="home">
+-      <nav class="nav container">
+-        <div class="logo-wrap">
+-          <span class="logo-dot">●</span>
++      <nav class="container nav">
++        <a class="brand" href="#home">
++          <span class="brand-dot">●</span>
+           <div>
+-            <p class="logo-name" id="restaurantName">Restaurant Listing</p>
+-            <p class="logo-sub">Google Maps Connected</p>
++            <strong>Hilal Bakers & Family Restaurant</strong>
++            <small>Chandgam, Pulwama</small>
+           </div>
+-        </div>
++        </a>
+         <div class="nav-links">
+           <a href="#about">About</a>
+           <a href="#menu">Menu</a>
+           <a href="#gallery">Gallery</a>
+-          <a href="#location">Location</a>
++          <a href="#reviews">Reviews</a>
+           <a href="#contact">Contact</a>
+         </div>
+-        <button class="btn btn-soft" id="openCartBtn">Cart <span id="cartCount">0</span></button>
++        <button class="btn btn-light" id="openCartBtn">Cart (<span id="cartCount">0</span>)</button>
+       </nav>
+ 
+-      <div class="container hero-content">
+-        <p class="pill">Premium Dining Experience</p>
+-        <h1 id="heroTitle">A Better Restaurant Website for Your Google Maps Listing</h1>
+-        <p id="heroDesc">
+-          We upgraded your website with professional sections, online menu, cart, WhatsApp ordering,
+-          and one-click navigation to your exact Google Maps location.
++      <section class="container hero-content">
++        <p class="eyebrow">Pulwama's Bakery + Family Dining Destination</p>
++        <h1>Delightful Family Dining with Fresh Baked Goods & Key Kashmiri Flavours</h1>
++        <p>
++          Pure veg family meals, fresh breads, sweets, pastries, and custom cake orders — all from
++          Hilal Bakers and Family Restaurant.
+         </p>
+         <div class="cta-row">
+-          <a class="btn btn-primary" href="#menu">Order Online</a>
+-          <a class="btn btn-ghost" id="mapsBtnTop" target="_blank" rel="noreferrer">Open on Google Maps</a>
++          <a class="btn btn-primary" href="tel:+919018881213">Reserve Table</a>
++          <a class="btn btn-outline" href="#menu">View Menu</a>
++          <a class="btn btn-primary" id="heroOrderBtn" target="_blank" rel="noreferrer">Order Online</a>
++          <a class="btn btn-outline" href="#contact">Contact Us</a>
+         </div>
+-      </div>
++      </section>
+     </header>
+ 
+     <main>
+       <section class="container section" id="about">
+         <div class="section-head">
+-          <h2>About the Restaurant</h2>
++          <h2>About Hilal Bakers & Family Restaurant</h2>
+           <p>
+-            This website is now focused on your Google Maps restaurant listing link so customers can
+-            discover, navigate, and order with confidence.
++            Established in Pulwama as a family-centric bakery and dining destination, Hilal Bakers is
++            known for pure veg options, quality ingredients, and a warm local hospitality experience.
+           </p>
+         </div>
+-        <div class="feature-grid">
+-          <article class="feature-card">
+-            <h3>Freshly Prepared</h3>
+-            <p>Curated dishes served with consistent quality and hygiene standards.</p>
++        <div class="about-grid">
++          <article class="card">
++            <h3>Fresh Bakery Everyday</h3>
++            <p>Daily baked breads, pastries, sweets, and custom cake orders for celebrations.</p>
+           </article>
+-          <article class="feature-card">
+-            <h3>Quick Service</h3>
+-            <p>Fast order handling for dine-in, takeaway, and travel customers.</p>
++          <article class="card">
++            <h3>Pure Veg Family Meals</h3>
++            <p>Comforting vegetarian mains, breads, rice plates, and family-friendly portions.</p>
+           </article>
+-          <article class="feature-card">
+-            <h3>Easy Navigation</h3>
+-            <p>Integrated map access so guests can reach your restaurant without confusion.</p>
++          <article class="card">
++            <h3>Kashmiri Heritage Touch</h3>
++            <p>A blend of bakery legacy and local flavour traditions with consistent quality.</p>
+           </article>
+         </div>
+       </section>
+ 
+       <section class="container section" id="menu">
+-        <div class="section-head row">
++        <div class="section-head split-title">
+           <div>
+-            <h2>Digital Menu</h2>
+-            <p>Browse our recommended items and place order via WhatsApp.</p>
++            <h2>Menu</h2>
++            <p>Choose a category, add items, and send your order directly to WhatsApp.</p>
+           </div>
+-          <div class="menu-chips" id="categoryChips"></div>
++          <div class="chips" id="categoryChips"></div>
+         </div>
+         <div class="menu-grid" id="menuGrid"></div>
+       </section>
+ 
+       <section class="container section" id="gallery">
+         <div class="section-head">
+-          <h2>Restaurant Gallery</h2>
+-          <p>Elegant visuals for dining ambiance and popular dishes.</p>
++          <h2>Gallery</h2>
++          <p>Bakery counters, dining experience, popular dishes, and signature sweets.</p>
+         </div>
+         <div class="gallery-grid">
+-          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Restaurant interior" />
+-          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" alt="Signature dishes" />
+-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Dining area" />
++          <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=80" alt="Bakery display" />
++          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=80" alt="Restaurant dish" />
++          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80" alt="Family dining interior" />
++          <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1200&q=80" alt="Pastry and dessert" />
+         </div>
+       </section>
+ 
+-      <section class="container section split" id="location">
+-        <div>
+-          <h2>Location & Directions</h2>
+-          <p>
+-            We connected this site to your provided Google Maps listing link. Customers can open
+-            navigation instantly from the buttons below.
+-          </p>
+-          <div class="cta-row">
+-            <a class="btn btn-primary" id="mapsBtnMiddle" target="_blank" rel="noreferrer">Navigate on Google Maps</a>
+-            <a class="btn btn-soft" id="shareMapBtn" target="_blank" rel="noreferrer">View Map Listing</a>
+-          </div>
++      <section class="container section" id="reviews">
++        <div class="section-head">
++          <h2>Reviews & Social Proof</h2>
++          <p>Trusted by local families and travellers for food quality, ambiance, and bakery items.</p>
++        </div>
++        <div class="review-grid">
++          <article class="card review">
++            <h3>⭐ 3.7/5 Average Rating</h3>
++            <p>“Good family restaurant vibes, tasty food, and reliable bakery quality.”</p>
++          </article>
++          <article class="card review">
++            <h3>Google & Local Listings</h3>
++            <p>Customers mention quality food, sweets, and a friendly dining environment.</p>
++          </article>
++          <article class="card review">
++            <h3>Instagram Presence</h3>
++            <p>Follow <strong>@hilalbakers</strong> for latest bakery products and offers.</p>
++          </article>
+         </div>
+-        <iframe
+-          id="mapFrame"
+-          title="Restaurant map"
+-          loading="lazy"
+-          referrerpolicy="no-referrer-when-downgrade"
+-        ></iframe>
+       </section>
+ 
+       <section class="container section" id="contact">
+-        <div class="contact-card">
+-          <h2>Contact & Order</h2>
+-          <p>Use WhatsApp for the fastest order confirmation.</p>
+-          <div class="contact-actions">
+-            <a class="btn btn-primary" id="whatsappChatBtn" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+-            <a class="btn btn-soft" id="mapsBtnBottom" target="_blank" rel="noreferrer">Get Directions</a>
++        <div class="contact-layout">
++          <div class="contact-card">
++            <h2>Contact & Location</h2>
++            <p><strong>Address:</strong> Chandgam, Pulwama – 192301, Jammu & Kashmir, India</p>
++            <p><strong>Phone:</strong> <a href="tel:+919018881213">+91 90188 81213</a> / <a href="tel:+919858326566">+91 98583 26566</a></p>
++            <p><strong>Hours:</strong> Daily 09:00 AM – 06:00 PM (verify locally)</p>
++            <div class="cta-row">
++              <a class="btn btn-primary" id="waContactBtn" target="_blank" rel="noreferrer">WhatsApp Order</a>
++              <a class="btn btn-outline" id="mapsBtn" target="_blank" rel="noreferrer">Open in Google Maps</a>
++            </div>
++            <div class="socials">
++              <a id="instagramBtn" target="_blank" rel="noreferrer">Instagram</a>
++              <a id="facebookBtn" target="_blank" rel="noreferrer">Facebook</a>
++            </div>
+           </div>
++          <iframe id="mapFrame" title="Hilal Bakers map" loading="lazy"></iframe>
+         </div>
+       </section>
++
++      <section class="container section cta-blocks" id="offers">
++        <article class="card">
++          <h3>Book a Table</h3>
++          <p>Call now for quick reservation and family seating.</p>
++          <a class="btn btn-primary" href="tel:+919018881213">Call Now</a>
++        </article>
++        <article class="card">
++          <h3>Order Custom Cake</h3>
++          <p>Share flavour, weight, message, and occasion on WhatsApp.</p>
++          <a class="btn btn-primary" id="customCakeBtn" target="_blank" rel="noreferrer">Order Custom Cake</a>
++        </article>
++        <article class="card">
++          <h3>Seasonal Specials</h3>
++          <p>Festive sweets, bakery deals, and limited-time family combos.</p>
++          <a class="btn btn-outline" id="seasonalOfferBtn" target="_blank" rel="noreferrer">Ask for Offers</a>
++        </article>
++      </section>
+     </main>
+ 
++    <footer class="footer">
++      <div class="container footer-grid">
++        <div>
++          <h4>Hilal Bakers & Family Restaurant</h4>
++          <p>Chandgam, Pulwama – 192301, Jammu & Kashmir</p>
++        </div>
++        <div>
++          <h4>Quick Links</h4>
++          <a href="#menu">Menu</a>
++          <a href="#gallery">Gallery</a>
++          <a href="#contact">Contact</a>
++        </div>
++        <div>
++          <h4>Connect</h4>
++          <a id="footerMapBtn" target="_blank" rel="noreferrer">Directions</a>
++          <a id="footerWaBtn" target="_blank" rel="noreferrer">WhatsApp</a>
++        </div>
++      </div>
++    </footer>
++
+     <div class="cart-modal hidden" id="cartModal">
+       <div class="cart-panel">
+-        <div class="cart-top">
+-          <h3>Your Order</h3>
+-          <button id="closeCartBtn" class="icon-btn">✕</button>
++        <div class="cart-head">
++          <h3>Review Order</h3>
++          <button class="icon-btn" id="closeCartBtn">✕</button>
+         </div>
+         <div id="cartItems" class="cart-items"></div>
+         <div class="checkout">
+-          <input id="customerName" placeholder="Your name" />
+-          <input id="customerPhone" placeholder="WhatsApp number" />
+-          <textarea id="customerAddress" rows="3" placeholder="Table no. / delivery location"></textarea>
+-          <p class="cart-total">Total: ₹<span id="cartTotal">0</span></p>
++          <input id="customerName" type="text" placeholder="Your Name" />
++          <input id="customerPhone" type="tel" placeholder="WhatsApp Number" />
++          <textarea id="customerAddress" rows="3" placeholder="Table No / Address"></textarea>
++          <p class="total">Total: ₹<span id="cartTotal">0</span></p>
+           <button class="btn btn-primary" id="placeOrderBtn">Confirm Order on WhatsApp</button>
+         </div>
+       </div>
+     </div>
+ 
+-    <a id="floatingWhatsApp" class="floating-wa" target="_blank" rel="noreferrer">WhatsApp Order</a>
++    <a class="floating-wa" id="floatingWhatsApp" target="_blank" rel="noreferrer">WhatsApp Order</a>
+ 
+     <script src="app.js"></script>
+   </body>
+ </html>
