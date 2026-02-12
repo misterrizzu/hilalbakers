@@ -35,13 +35,18 @@
                         <div class="logo-sub">Family Restaurant</div>
                     </div>
                 </a>
-                <div class="nav-menu">
+                <div class="nav-menu" id="navMenu">
                     <a href="#about" class="nav-link">About</a>
                     <a href="#menu" class="nav-link">Menu</a>
-                    <a href="#specialties" class="nav-link">Specialties</a>
+                    <a href="#featured" class="nav-link">Featured</a>
                     <a href="#gallery" class="nav-link">Gallery</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <a href="#menu" class="btn btn-cta">Order Now</a>
             </div>
         </nav>
@@ -90,8 +95,50 @@
             </div>
         </section>
 
+        <!-- FEATURED SECTION -->
+        <section class="featured" id="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Chef's Recommendations</h2>
+                    <p>Try our most loved and highest-rated items</p>
+                </div>
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <div class="featured-badge">⭐ Best Seller</div>
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=350&h=280&fit=crop" alt="Chocolate Cake">
+                        <h3>Chocolate Layer Cake</h3>
+                        <p>Rich, moist eggless chocolate cake with creamy frosting</p>
+                        <div class="featured-footer">
+                            <span class="price">₹350</span>
+                            <button onclick="addToCart(8)" class="btn-small">Order</button>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <div class="featured-badge">🔥 Most Popular</div>
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=350&h=280&fit=crop" alt="Croissant">
+                        <h3>Butter Croissants</h3>
+                        <p>Flaky, golden croissants with authentic French technique</p>
+                        <div class="featured-footer">
+                            <span class="price">₹60</span>
+                            <button onclick="addToCart(2)" class="btn-small">Order</button>
+                        </div>
+                    </div>
+                    <div class="featured-card">
+                        <div class="featured-badge">💝 Top Rated</div>
+                        <img src="https://images.unsplash.com/photo-1585809377579-a3d8e2d37e77?w=350&h=280&fit=crop" alt="Gulab Jamun">
+                        <h3>Gulab Jamun Special</h3>
+                        <p>Soft, syrup-soaked sweet dumplings with premium ingredients</p>
+                        <div class="featured-footer">
+                            <span class="price">₹280</span>
+                            <button onclick="addToCart(12)" class="btn-small">Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SPECIALTIES SECTION -->
-        <section class="specialties" id="specialties">
+        <section class="specialties">
             <div class="container">
                 <div class="section-header">
                     <h2>Our Specialties</h2>
@@ -100,28 +147,28 @@
                 <div class="specialty-grid">
                     <div class="specialty-card">
                         <div class="specialty-image">
-                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=250&fit=crop" alt="Pastries" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=250&fit=crop" alt="Fresh Pastries" loading="lazy">
                         </div>
                         <h3>🥐 Fresh Pastries</h3>
                         <p>Croissants, éclairs, and butter pastries made with French pastry techniques</p>
                     </div>
                     <div class="specialty-card">
                         <div class="specialty-image">
-                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&h=250&fit=crop" alt="Breads" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&h=250&fit=crop" alt="Artisan Breads" loading="lazy">
                         </div>
                         <h3>🍞 Artisan Breads</h3>
                         <p>Whole wheat, multigrain, and sourdough breads baked fresh daily</p>
                     </div>
                     <div class="specialty-card">
                         <div class="specialty-image">
-                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=250&fit=crop" alt="Custom cakes" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=250&fit=crop" alt="Custom Cakes" loading="lazy">
                         </div>
                         <h3>🎂 Custom Cakes</h3>
                         <p>Eggless, vegan, and specialty cakes customized for your celebrations</p>
                     </div>
                     <div class="specialty-card">
                         <div class="specialty-image">
-                            <img src="https://images.unsplash.com/photo-1585809377579-a3d8e2d37e77?w=300&h=250&fit=crop" alt="Sweets" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1585809377579-a3d8e2d37e77?w=300&h=250&fit=crop" alt="Traditional Sweets" loading="lazy">
                         </div>
                         <h3>🍬 Traditional Sweets</h3>
                         <p>Kashmiri and traditional Indian sweets prepared with authentic recipes</p>
@@ -142,6 +189,42 @@
             </div>
         </section>
 
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Real reviews from satisfied customers</p>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Absolutely the best bakery in Pulwama! Fresh cakes, amazing breads, and the most hospitable family. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <strong>Fatima Khan</strong>
+                            <span>Google Reviews</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Their custom cakes are incredible! Perfect for parties and celebrations. The quality and taste are unmatched in the area."</p>
+                        <div class="testimonial-author">
+                            <strong>Ahmed Hassan</strong>
+                            <span>Facebook</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Family dining at its best! Warm atmosphere, delicious food, and fresh bakery items. We visit every week!"</p>
+                        <div class="testimonial-author">
+                            <strong>Aisha Mohammad</strong>
+                            <span>Instagram</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- GALLERY SECTION -->
         <section class="gallery" id="gallery">
             <div class="container">
@@ -151,28 +234,36 @@
                 </div>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=500&h=400&fit=crop" alt="Bakery display" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=500&h=400&fit=crop" alt="Bakery display with fresh pastries" loading="lazy">
                         <p>Beautiful Bakery Display</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&h=400&fit=crop" alt="Dining area" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&h=400&fit=crop" alt="Cozy family dining space" loading="lazy">
                         <p>Warm Dining Space</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1565958011504-4b90570e550d?w=500&h=400&fit=crop" alt="Fresh bakes" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1565958011504-4b90570e550d?w=500&h=400&fit=crop" alt="Fresh baked items" loading="lazy">
                         <p>Fresh Baked Goods</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop" alt="Pastry selection" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop" alt="Premium pastry selection" loading="lazy">
                         <p>Premium Pastries</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1585809377579-a3d8e2d37e77?w=500&h=400&fit=crop" alt="Sweets" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1585809377579-a3d8e2d37e77?w=500&h=400&fit=crop" alt="Traditional Indian sweets" loading="lazy">
                         <p>Traditional Sweets</p>
                     </div>
                     <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1476124369162-f4978b4a9bcc?w=500&h=400&fit=crop" alt="Family moment" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1476124369162-f4978b4a9bcc?w=500&h=400&fit=crop" alt="Families enjoying meals together" loading="lazy">
                         <p>Family Moments</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1557808172-e54e88d3b87d?w=500&h=400&fit=crop" alt="Professional kitchen setup" loading="lazy">
+                        <p>Our Kitchen</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&h=400&fit=crop" alt="Fresh morning bakery" loading="lazy">
+                        <p>Fresh Morning Bakes</p>
                     </div>
                 </div>
             </div>
@@ -233,7 +324,7 @@
     </div>
 
     <!-- FLOATING BUTTON -->
-    <a href="https://wa.me/919018881213" target="_blank" class="floating-wa">💬 Order on WhatsApp</a>
+    <a href="https://wa.me/919018881213" target="_blank" class="floating-wa">💬 WhatsApp</a>
 
     <script src="app.js"></script>
 </body>

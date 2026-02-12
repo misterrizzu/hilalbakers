@@ -61,6 +61,8 @@ const customerName = document.getElementById('customerName');
 const customerPhone = document.getElementById('customerPhone');
 const customerAddress = document.getElementById('customerAddress');
 const floatingWa = document.querySelector('.floating-wa');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
 
 // ============================================
 // INITIALIZATION
@@ -70,6 +72,35 @@ function init() {
     renderCategories();
     renderMenuItems('All');
     attachEventListeners();
+    setupHamburgerMenu();
+}
+
+// ============================================
+// HAMBURGER MENU
+// ============================================
+
+function setupHamburgerMenu() {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar') && navMenu.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
 }
 
 // ============================================
